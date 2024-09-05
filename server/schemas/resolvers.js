@@ -5,7 +5,16 @@ const resolvers = {
         items: async () => {
             return Item.find();
         }
-    }
-};
+    },
+
+    Mutation: {
+        addItem: async (Item, { name, img, cost, calories }) => {
+            return Item.create({ name, img, cost, calories });
+          },
+          removeItem: async (parent, { itemId }) => {
+            return Item.findOneAndDelete({ _id: itemId });
+          },
+    },
+}
 
 module.exports = resolvers;
