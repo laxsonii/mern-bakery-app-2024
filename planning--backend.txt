@@ -1,0 +1,65 @@
+**backend*
+1- create server folders
+2- Add inside server folder the following:
+    config  
+    models
+    schemas
+    seeds
+3- Create package.json
+    - npm init -y 
+    - npm i mongoose @apollo/ server express  graphql
+    - graphql??
+    - npm i nodemon --save-dev
+    - add scripts to run app in dev mode
+4. create server.json
+5. Create Database
+    - add connection.js file in config
+6. Create Models
+    - Add item models:
+        name
+        image
+        cost
+        calories
+7. Create schema: typedefs and resolvers
+    - query:items
+8. Add seed data
+    create cleanDB.js file to empty the database
+    items.json - data
+    seeds.js - executes the seeding process
+    add  to scripts section of package.json,  seed script
+
+9. Test items endpoint in graphql browser (appollo sandbox)
+    ----
+10. Create mutations in resolver & mutations (back end)
+    Add bakery item => addItem
+    delete bakery item =>removeItem
+    Update bakery item =>updateItem
+    ---------------
+
+[
+  { name: "rapsberry petit four", cost: 199, calories: 131, img: "https://images-gmi-pmc.edge-generalmills.com/5a0d7c12-022f-4f05-9b80-4e9b28dc7029.jpg" },
+  { name: "shortbread cookie", cost: 89, calories: 142, img: "https://www.noracooks.com/wp-content/uploads/2019/12/IMG_9575.jpg" },
+  { name: "chocolate croissant", cost: 295, calories: 470, img: "https://t4.ftcdn.net/jpg/02/81/07/59/240_F_281075992_X7unLnUXPnyhQcwiOtjtkeNUfQEshr44.jpg" },
+  { name: "red velvet cupcake", cost: 349, calories: 439, img: "https://thenovicechefblog.com/wp-content/uploads/2010/09/Red-Velvet-Cupcakes-1-720x720.jpg" },
+  { name: "lemon square", cost: 189, calories: 275, img: "https://images-gmi-pmc.edge-generalmills.com/48e8b8e5-409f-414c-96f7-cbb42afb43ef.jpg" },
+  { name: "pistachio macarons", cost: 249, calories: 97, img: "https://i2.wp.com/www.piesandtacos.com/wp-content/uploads/2018/10/pistachio-macarons-29.jpg?w=600&ssl=1" }
+]
+
+
+
+Frontend => client
+
+1. create client folder using vite create command inside the mern-app folder
+2. Install dependencies - @apollo/client
+3. Set up what is needed to consume the backend
+    a. add proxy to vite.config.json
+    b. Wrap main component in ApolloProvider
+    c. Create utils folder and add queries.js
+    d. Create landing page, consume the backend data (ex. 11, Home)
+4. Use ant design components for each item ()
+
+----
+5. Add a mutations file 
+- addItem
+- removeItem
+- updateItem
